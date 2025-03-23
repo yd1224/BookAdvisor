@@ -3,14 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Find information about different hotels in the world before booking them.">
-    <meta name="keywords" content="hotels, booking, raiting, travel, world, vacation, holiday, trip, BookAdvisor">
+    <meta name="description" content="Find information about different hotels worldwide before booking.">
+    <meta name="keywords" content="hotels, booking, rating, travel, vacation, holiday, trip, BookAdvisor">
     <meta name="author" content="Yelyzaveta Demchenko">
     <meta name="robots" content="index, follow">
-    <meta name="googlebot" content="index, follow">
     <title>BookAdvisor - Find Your Perfect Stay</title>
 </head>
-<body>
+<body bgcolor="lightblue" alink="red" vlink="green">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="hotel-list.html">Hotels</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1>Welcome to BookAdvisor</h1>
+            <figure>
+                <a href="assets/img/hero-index-image.png" target="_blank">
+                    <img src="assets/img/hero-index-image.png" width="600" height="300" alt="BookAdvisor Hero Image">
+                </a>
+                <figcaption>BookAdvisor Hero Image 600x300</figcaption>
+                <a href="assets/img/hero-index-image.png" target="_blank">
+                    <img src="assets/img/hero-index-image.png" width="300" height="150" alt="BookAdvisor Hero Image">
+                </a>
+                <figcaption>BookAdvisor Hero Image 300x150</figcaption>
+            </figure>
+            <p>Your trusted companion in finding the perfect accommodation for your next adventure. Discover amazing hotels worldwide with real traveler experiences.</p>
+            <p><a href="#why-choose-us">Why choose us?</a> | <a href="#list-of-partners">Our partners</a> | <a href="hotel-list.html#list-of-hotels">Find a hotel</a></p>
+        </section>
+        
+        <section>
+            <h2 id="popular-destinations">Popular Destinations</h2>
+            <table cellspacing="5" cellpadding="10">
+                <caption>Top Destinations in the US</caption>
+                <colgroup>
+                    <col style="background-color: #f9f9f9;">
+                    <col style="background-color: #f9f9f9;">
+                    <col style="background-color: #f9f9f9;">
+                </colgroup>
+                <thead bgcolor="grey">
+                    <tr>
+                        <th>Las Vegas</th>
+                        <th>New York</th>
+                        <th>Washington</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img src="assets/img/las-vegas.png" width="50" height="50" alt="Las Vegas"></td>
+                        <td><img src="assets/img/new-york.jpg" width="50" height="50" alt="New York"></td>
+                        <td><img src="assets/img/washington.jpg" width="50" height="50" alt="Washington"></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">Entertainment & Nightlife</a></td>
+                        <td><a href="#">Culture & Food</a></td>
+                        <td><a href="#">Historic Landmarks</a></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" align="center"><b>And many more</b></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2 id="why-choose-us">Why Choose Us?</h2>
+            <ul>
+                <li type="square"><strong>24/7 Support:</strong> Our team is available round the clock to assist you.</li>
+                <li type="circle"><strong>Trusted Reviews:</strong> Real traveler experiences ensure reliable recommendations.</li>
+                <li type="disc"><strong>Verified Partners:</strong> We collaborate with reputable booking platforms.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2 id="list-of-partners">Our Partners</h2>
+            <ol>
+                <li><a href="https://www.booking.com" target="_blank">Booking.com</a></li>
+                <li><a href="https://www.expedia.com" target="_blank">Expedia</a></li>
+                <li><a href="https://www.airbnb.com" target="_blank">Airbnb</a></li>
+            </ol>
+        </section>
+        
+        <section>
+            <h2>Hotel Star Ratings Explained</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/MIUnI2mAt5E" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+        </section>
+
+        <section>
+            <h2>Star Rating Guide</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rating</th>
+                        <th>Meaning</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>⭐</td><td>Basic</td></tr>
+                    <tr><td>⭐⭐</td><td>Good</td></tr>
+                    <tr><td>⭐⭐⭐</td><td>Very Good</td></tr>
+                    <tr><td>⭐⭐⭐⭐</td><td>Excellent</td></tr>
+                    <tr><td>⭐⭐⭐⭐⭐</td><td>Luxury</td></tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <section id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <dl>
+            <dt>What services do you offer?</dt>
+            <dd>We offer a wide range of travel-related services including hotel bookings, flight reservations, and guided tours.</dd>
     
+            <dt>How can I contact customer support?</dt>
+            <dd>You can reach our customer support team 24/7 via email at support@example.com or by phone at +1 (123) 456-7890.</dd>
+    
+            <dt>Do you offer refunds?</dt>
+            <dd>Yes, we offer refunds on most bookings if cancelled within 48 hours of the reservation. Please check our refund policy for more details.</dd>
+        </dl>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 BookAdvisor. All rights reserved.</p>
+        <p><a href="mailto:bookadvisor@example.com">Contact Us</a> | <a href="tel:123456789">Call Us</a> | <a href="about-us.html">About Us</a> | <a href="https://www.tripadvisor.com" target="_blank">TripAdvisor Partner</a></p>
+    </footer>
 </body>
 </html>
