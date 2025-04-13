@@ -147,6 +147,7 @@ Index page styles
 .hero-content h1 {
   font-size: 32px;
   margin-bottom: 12px;
+  text-align: center;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
@@ -183,7 +184,6 @@ Index page styles
   .hero-content {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 32px;
-    width: 90%;
     max-width: 800px;
   }
 
@@ -224,23 +224,7 @@ Index page styles
 .popular-destinations {
   padding: 64px 0;
   background-color: #fff;
-  position: relative;
   display: none;
-}
-
-.popular-destinations::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 200px;
-  z-index: 0;
-}
-
-.popular-destinations .container {
-  position: relative;
-  z-index: 1;
 }
 
 .popular-destinations h2 {
@@ -260,12 +244,9 @@ Index page styles
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
   border-radius: 12px;
   padding: 24px;
-  backdrop-filter: blur(10px);
-  background-color: rgba(255, 255, 255, 0.9);
 }
 
 .destinations-table caption {
-  padding: 16px;
   font-size: 19px;
   font-weight: 600;
   color: #333;
@@ -288,7 +269,6 @@ Index page styles
 .destinations-table td {
   padding: 0;
   width: 33.333%;
-  position: relative;
 }
 
 .image-container {
@@ -297,7 +277,6 @@ Index page styles
   padding-top: 75%; /* 4:3 aspect ratio */
   overflow: hidden;
   border-radius: 8px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 }
 
 .image-container img {
@@ -329,10 +308,6 @@ Index page styles
   .popular-destinations h2 {
     font-size: 32px;
     margin-bottom: 24px;
-  }
-
-  .popular-destinations::before {
-    height: 120px;
   }
 
   .destinations-table {
@@ -400,20 +375,6 @@ Index page styles
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.feature-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 96px;
-  height: 96px;
-  background: linear-gradient(135deg, #007bff, #00bcd4);
-  color: white;
-  border-radius: 12px;
-  font-size: 24px;
-  font-weight: bold;
-  flex-shrink: 0;
-}
-
 .feature-content {
   flex: 1;
 }
@@ -443,6 +404,7 @@ Index page styles
   .features-list {
     gap: 24px;
     padding: 0 16px;
+    flex-direction: column;
   }
 
   .feature-item {
@@ -558,12 +520,6 @@ Index page styles
     margin-bottom: 32px;
   }
 
-  .partners ol li::before {
-    width: 57px;
-    height: 57px;
-    font-size: 17px;
-  }
-
   .partner-link {
     padding: 24px;
   }
@@ -585,20 +541,6 @@ Index page styles
 /* FAQ Section */
 #faq {
   padding: 48px 0;
-  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-  position: relative;
-  overflow: hidden;
-}
-
-#faq::before {
-  content: "?";
-  position: absolute;
-  top: -48px;
-  right: -48px;
-  font-size: 320px;
-  color: rgba(0, 123, 255, 0.03);
-  font-weight: 900;
-  z-index: 0;
 }
 
 #faq h2 {
@@ -607,25 +549,11 @@ Index page styles
   color: #2c3e50;
   margin-bottom: 32px;
   font-weight: 700;
-  position: relative;
-  z-index: 1;
-}
-
-#faq h2::after {
-  content: "";
-  display: block;
-  width: 64px;
-  height: 4px;
-  background: linear-gradient(to right, #007bff, #00d2ff);
-  margin: 12px auto 0;
-  border-radius: 2px;
 }
 
 .faq-list {
   max-width: 100%;
   margin: 0 auto;
-  position: relative;
-  z-index: 1;
   padding: 0 16px;
 }
 
@@ -639,7 +567,6 @@ Index page styles
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   cursor: pointer;
-  position: relative;
   border: 1px solid rgba(0, 123, 255, 0.1);
 }
 
@@ -651,19 +578,6 @@ Index page styles
   margin: 0 4px 16px;
   background: white;
   border-radius: 0 0 8px 8px;
-  position: relative;
-}
-
-.faq-answer::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 4px;
-  height: 100%;
-  background: linear-gradient(to bottom, #007bff, #00bcd4);
-  border-radius: 2px;
-  opacity: 0.5;
 }
 
 @media (min-width: 768px) {
@@ -671,21 +585,9 @@ Index page styles
     padding: 80px 0;
   }
 
-  #faq::before {
-    top: -80px;
-    right: -80px;
-    font-size: 480px;
-  }
-
   #faq h2 {
     font-size: 40px;
     margin-bottom: 48px;
-  }
-
-  #faq h2::after {
-    width: 96px;
-    height: 6px;
-    margin: 16px auto 0;
   }
 
   .faq-list {
@@ -706,10 +608,6 @@ Index page styles
     padding: 8px 24px 24px;
     margin: 0 8px 16px;
     border-radius: 0 0 12px 12px;
-  }
-
-  .faq-answer::before {
-    width: 6px;
   }
 }
 
@@ -738,7 +636,7 @@ Hotel List Page Styles
 
 .filters-section {
   margin: 32px 0 48px;
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  background: #fff;
   padding: 32px;
   border-radius: 12px;
 }
@@ -749,17 +647,6 @@ Hotel List Page Styles
   margin-bottom: 24px;
   position: relative;
   padding-bottom: 8px;
-}
-
-.filters-section h2::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 50px;
-  height: 3px;
-  background: linear-gradient(to right, #007bff, #00d2ff);
-  border-radius: 2px;
 }
 
 .search-filters {
@@ -775,7 +662,6 @@ Hotel List Page Styles
 .search-bar {
   display: flex;
   gap: 12px;
-  position: relative;
 }
 
 .search-bar input {
@@ -785,17 +671,6 @@ Hotel List Page Styles
   border-radius: 8px;
   font-size: 16px;
   background: #f8f9fa;
-}
-
-.search-bar::before {
-  content: "🔍";
-  position: absolute;
-  left: 16px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 19px;
-  color: #6c757d;
-  pointer-events: none;
 }
 
 .search-bar button {
@@ -812,8 +687,8 @@ Hotel List Page Styles
 }
 
 .filters {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  display: flex;
+  flex-direction: row;
   gap: 16px;
 }
 
@@ -849,7 +724,7 @@ Hotel List Page Styles
   }
 
   .filters {
-    grid-template-columns: 1fr;
+    flex-direction: column;
   }
 
   .filters select {
@@ -876,17 +751,6 @@ footer {
   font-size: 19px;
   margin-bottom: 16px;
   position: relative;
-}
-
-.footer-section h3::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -8px;
-  width: 32px;
-  height: 2px;
-  background: linear-gradient(to right, #007bff, #00d2ff);
-  border-radius: 1px;
 }
 
 .footer-section p {
