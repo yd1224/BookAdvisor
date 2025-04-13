@@ -1,136 +1,314 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Find information about different hotels worldwide before booking.">
-    <meta name="keywords" content="hotels, booking, rating, travel, vacation, holiday, trip, BookAdvisor">
-    <meta name="author" content="Yelyzaveta Demchenko">
-    <meta name="robots" content="index, follow">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Find information about different hotels worldwide before booking."
+    />
+    <meta
+      name="keywords"
+      content="hotels, booking, rating, travel, vacation, holiday, trip, BookAdvisor"
+    />
+    <meta name="author" content="Yelyzaveta Demchenko" />
+    <meta name="robots" content="index, follow" />
     <title>BookAdvisor - Find Your Perfect Stay</title>
-</head>
-<body bgcolor="lightblue" alink="red" vlink="green">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="hotel-list.html">Hotels</a></li>
-                <li><a href="about-us.html">About Us</a></li>
-            </ul>
-        </nav>
+      <nav class="main-nav">
+        <div class="container">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="hotel-list.html">Hotels</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+          </ul>
+        </div>
+      </nav>
     </header>
 
     <main>
-        <section>
-            <h1>Welcome to BookAdvisor</h1>
-            <figure>
-                <a href="assets/img/hero-index-image.png" target="_blank">
-                    <img src="assets/img/hero-index-image.png" width="600" height="300" alt="BookAdvisor Hero Image">
-                </a>
-                <figcaption>BookAdvisor Hero Image 600x300</figcaption>
-                <a href="assets/img/hero-index-image.png" target="_blank">
-                    <img src="assets/img/hero-index-image.png" width="300" height="150" alt="BookAdvisor Hero Image">
-                </a>
-                <figcaption>BookAdvisor Hero Image 300x150</figcaption>
-            </figure>
-            <p>Your trusted companion in finding the perfect accommodation for your next adventure. Discover amazing hotels worldwide with real traveler experiences.</p>
-            <p><a href="#why-choose-us">Why choose us?</a> | <a href="#list-of-partners">Our partners</a> | <a href="hotel-list.html#list-of-hotels">Find a hotel</a></p>
-        </section>
-        
-        <section>
-            <h2 id="popular-destinations">Popular Destinations</h2>
-            <table cellspacing="5" cellpadding="10">
-                <caption>Top Destinations in the US</caption>
-                <colgroup>
-                    <col style="background-color: #f9f9f9;">
-                    <col style="background-color: #f9f9f9;">
-                    <col style="background-color: #f9f9f9;">
-                </colgroup>
-                <thead bgcolor="grey">
-                    <tr>
-                        <th>Las Vegas</th>
-                        <th>New York</th>
-                        <th>Washington</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><img src="assets/img/las-vegas.png" width="50" height="50" alt="Las Vegas"></td>
-                        <td><img src="assets/img/new-york.jpg" width="50" height="50" alt="New York"></td>
-                        <td><img src="assets/img/washington.jpg" width="50" height="50" alt="Washington"></td>
-                    </tr>
-                    <tr>
-                        <td><a href="#">Entertainment & Nightlife</a></td>
-                        <td><a href="#">Culture & Food</a></td>
-                        <td><a href="#">Historic Landmarks</a></td>
-                    </tr>
-                    <tr>
-                        <td colspan="3" align="center"><b>And many more</b></td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+      <section class="hero">
+        <img
+          src="assets/img/hero-index-image.png"
+          alt="Luxury hotel view"
+          class="hero-image"
+        />
+        <div class="hero-content">
+          <h1>Welcome to BookAdvisor</h1>
+          <p style="color: whitesmoke">
+            Your trusted companion in finding the perfect accommodation for your
+            next adventure.
+          </p>
+          <div class="hero-links">
+            <a href="#why-choose-us" class="hero-link">Why choose us?</a>
+            <a href="#list-of-partners" class="hero-link">Our partners</a>
+            <a href="hotel-list.html#list-of-hotels" class="hero-link"
+              >Find a hotel</a
+            >
+          </div>
+        </div>
+      </section>
 
-        <section>
-            <h2 id="why-choose-us">Why Choose Us?</h2>
-            <ul>
-                <li type="square"><strong>24/7 Support:</strong> Our team is available round the clock to assist you.</li>
-                <li type="circle"><strong>Trusted Reviews:</strong> Real traveler experiences ensure reliable recommendations.</li>
-                <li type="disc"><strong>Verified Partners:</strong> We collaborate with reputable booking platforms.</li>
-            </ul>
-        </section>
+      <section class="popular-destinations">
+        <div class="container">
+          <h2 id="popular-destinations">Popular Destinations</h2>
+          <table class="destinations-table">
+            <caption>
+              Top Destinations in the US
+            </caption>
+            <colgroup>
+              <col />
+              <col />
+              <col />
+            </colgroup>
+            <thead>
+              <tr>
+                <th>Las Vegas</th>
+                <th>New York</th>
+                <th>Washington</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="destination-images">
+                <td>
+                  <div class="image-container">
+                    <img src="assets/img/las-vegas.png" alt="Las Vegas" />
+                  </div>
+                </td>
+                <td>
+                  <div class="image-container">
+                    <img src="assets/img/new-york.jpg" alt="New York" />
+                  </div>
+                </td>
+                <td>
+                  <div class="image-container">
+                    <img src="assets/img/washington.jpg" alt="Washington" />
+                  </div>
+                </td>
+              </tr>
+              <tr class="destination-descriptions">
+                <td>
+                  <a href="#" class="destination-link"
+                    >Entertainment & Nightlife</a
+                  >
+                </td>
+                <td><a href="#" class="destination-link">Culture & Food</a></td>
+                <td>
+                  <a href="#" class="destination-link">Historic Landmarks</a>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="3" align="center"><b>And many more</b></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
 
-        <section>
-            <h2 id="list-of-partners">Our Partners</h2>
-            <ol>
-                <li><a href="https://www.booking.com" target="_blank">Booking.com</a></li>
-                <li><a href="https://www.expedia.com" target="_blank">Expedia</a></li>
-                <li><a href="https://www.airbnb.com" target="_blank">Airbnb</a></li>
-            </ol>
-        </section>
-        
-        <section>
-            <h2>Hotel Star Ratings Explained</h2>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/MIUnI2mAt5E" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-        </section>
+      <section class="why-choose-us">
+        <div class="container">
+          <h2 id="why-choose-us">Why Choose Us?</h2>
+          <ul class="features-list">
+            <li class="feature-item">
+              <div class="feature-icon">24/7</div>
+              <div class="feature-content">
+                <h3>24/7 Support</h3>
+                <p>Our team is available round the clock to assist you.</p>
+              </div>
+            </li>
+            <li class="feature-item">
+              <div class="feature-icon">★</div>
+              <div class="feature-content">
+                <h3>Trusted Reviews</h3>
+                <p>
+                  Real traveler experiences ensure reliable recommendations.
+                </p>
+              </div>
+            </li>
+            <li class="feature-item">
+              <div class="feature-icon">✓</div>
+              <div class="feature-content">
+                <h3>Verified Partners</h3>
+                <p>We collaborate with reputable booking platforms.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
 
-        <section>
-            <h2>Star Rating Guide</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Rating</th>
-                        <th>Meaning</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td>⭐</td><td>Basic</td></tr>
-                    <tr><td>⭐⭐</td><td>Good</td></tr>
-                    <tr><td>⭐⭐⭐</td><td>Very Good</td></tr>
-                    <tr><td>⭐⭐⭐⭐</td><td>Excellent</td></tr>
-                    <tr><td>⭐⭐⭐⭐⭐</td><td>Luxury</td></tr>
-                </tbody>
-            </table>
-        </section>
+      <section class="container partners">
+        <h2 id="list-of-partners">Our Partners</h2>
+        <p class="partners-intro">
+          We collaborate with the world's leading travel platforms to bring you
+          the best deals and experiences.
+        </p>
+        <ol>
+          <li>
+            <a
+              href="https://www.booking.com"
+              target="_blank"
+              class="partner-link"
+            >
+              <span class="partner-name">Booking.com</span>
+              <span class="partner-desc"
+                >Global leader in online travel bookings with over 28 million
+                listings worldwide</span
+              >
+              <span class="partner-features">
+                <span class="feature">Verified Reviews</span>
+                <span class="feature">Best Price Guarantee</span>
+                <span class="feature">24/7 Support</span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.expedia.com"
+              target="_blank"
+              class="partner-link"
+            >
+              <span class="partner-name">Expedia</span>
+              <span class="partner-desc"
+                >One-stop travel platform for hotels, flights, car rentals, and
+                activities</span
+              >
+              <span class="partner-features">
+                <span class="feature">Rewards Program</span>
+                <span class="feature">Package Deals</span>
+                <span class="feature">Price Match</span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.airbnb.com"
+              target="_blank"
+              class="partner-link"
+            >
+              <span class="partner-name">Airbnb</span>
+              <span class="partner-desc"
+                >Unique accommodations and experiences in 190+ countries</span
+              >
+              <span class="partner-features">
+                <span class="feature">Local Stays</span>
+                <span class="feature">Unique Experiences</span>
+                <span class="feature">Verified Hosts</span>
+              </span>
+            </a>
+          </li>
+        </ol>
+      </section>
     </main>
 
-    <section id="faq">
-        <h2>Frequently Asked Questions</h2>
-        <dl>
-            <dt>What services do you offer?</dt>
-            <dd>We offer a wide range of travel-related services including hotel bookings, flight reservations, and guided tours.</dd>
-    
-            <dt>How can I contact customer support?</dt>
-            <dd>You can reach our customer support team 24/7 via email at support@example.com or by phone at +1 (123) 456-7890.</dd>
-    
-            <dt>Do you offer refunds?</dt>
-            <dd>Yes, we offer refunds on most bookings if cancelled within 48 hours of the reservation. Please check our refund policy for more details.</dd>
-        </dl>
+    <section id="faq" class="container">
+      <h2>Frequently Asked Questions</h2>
+      <dl class="faq-list">
+        <dt class="faq-question">What services do you offer?</dt>
+        <dd class="faq-answer">
+          We offer a wide range of travel-related services including hotel
+          bookings, flight reservations, and guided tours.
+        </dd>
+
+        <dt class="faq-question">How can I contact customer support?</dt>
+        <dd class="faq-answer">
+          You can reach our customer support team 24/7 via email at
+          support@example.com or by phone at +1 (123) 456-7890.
+        </dd>
+
+        <dt class="faq-question">Do you offer refunds?</dt>
+        <dd class="faq-answer">
+          Yes, we offer refunds on most bookings if cancelled within 48 hours of
+          the reservation. Please check our refund policy for more details.
+        </dd>
+      </dl>
     </section>
 
     <footer>
-        <p>&copy; 2025 BookAdvisor. All rights reserved.</p>
-        <p><a href="mailto:bookadvisor@example.com">Contact Us</a> | <a href="tel:123456789">Call Us</a> | <a href="about-us.html">About Us</a> | <a href="https://www.tripadvisor.com" target="_blank">TripAdvisor Partner</a></p>
+      <div class="footer-content container">
+        <div class="footer-section">
+          <h3>About BookAdvisor</h3>
+          <p>
+            Your trusted companion in finding the perfect accommodation for your
+            next adventure. We help travelers make informed decisions through
+            authentic reviews and comprehensive hotel information.
+          </p>
+        </div>
+
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="hotel-list.html">Hotels</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <ul>
+            <li>
+              <a href="mailto:bookadvisor@example.com"
+                ><i class="icon">✉</i> bookadvisor@example.com</a
+              >
+            </li>
+            <li>
+              <a href="tel:123456789"
+                ><i class="icon">📞</i> +1 (123) 456-789</a
+              >
+            </li>
+            <li>
+              <address>
+                <i class="icon">📍</i> 123 Travel Street, Tourism City, TC 12345
+              </address>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <div class="social-links">
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              aria-label="Follow us on Facebook"
+              ><i class="icon">👥</i></a
+            >
+            <a
+              href="https://twitter.com"
+              target="_blank"
+              aria-label="Follow us on Twitter"
+              ><i class="icon">🐦</i></a
+            >
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              aria-label="Follow us on Instagram"
+              ><i class="icon">📸</i></a
+            >
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              aria-label="Follow us on LinkedIn"
+              ><i class="icon">💼</i></a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container">
+          <p>&copy; 2025 BookAdvisor. All rights reserved.</p>
+          <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Cookie Policy</a>
+          </div>
+        </div>
+      </div>
     </footer>
-</body>
+  </body>
 </html>
