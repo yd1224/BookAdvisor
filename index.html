@@ -15,6 +15,7 @@
     <meta name="robots" content="index, follow" />
     <title>BookAdvisor - Find Your Perfect Stay</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="chatbot.css" />
   </head>
   <body>
     <header>
@@ -223,6 +224,22 @@
       </dl>
     </section>
 
+    <section id="dom-examples" class="container">
+      <h2>Hotel Information Update Examples</h2>
+      
+      <div id="hotel-card">
+        <h3 style="color: #000;">Luxury Resort</h3>
+        <p class="description">5-star accommodation with ocean view</p>
+        <div class="amenities">WiFi, Pool, Spa</div>
+        <span class="rating">Rating: <strong>4.8</strong>/5</span>
+      </div>
+
+      <div id="review-section">
+        <p>Latest Reviews</p>
+        <div class="review-text">Excellent stay!</div>
+      </div>
+    </section>
+
     <footer>
       <div class="footer-content container">
         <div class="footer-section">
@@ -307,5 +324,123 @@
         </div>
       </div>
     </footer>
+    <div id="chat-btn" class="chat-btn">
+      <img src="./assets/icons/message.svg" width="40" height="40" alt="Message">
+    </div>
+    <div class="chat-container">
+      <div class="chat-header">
+        <h2>Book Advisor Chat</h2>
+        <button class="chat-close"></button>
+      </div>
+      <div class="chat-messages"></div>
+      <div class="chat-input-container">
+        <input type="text" class="chat-input" placeholder="Type your question...">
+        <button class="chat-send">Send</button>
+      </div>
+    </div>
   </body>
+  <script src="chatbot.js"></script>
+  <script>
+    // const name = prompt('Enter your name');
+    // const isSure = confirm('Are you sure?');
+
+    // if (isSure) {
+    //   alert(`Hello, ${name}`);
+    // } else {
+    //   alert('Hello, Guest');
+    // }
+
+
+
+
+
+
+    // function compareStrings(str1, str2) {
+    //   return str1.length > str2.length ? str1 : str2;
+    // }
+    // const string1 = 'Hello';
+    // const string2 = 'Goodbye';
+    // alert(compareStrings(string1, string2));
+
+
+
+
+
+
+    // const originalColor = document.body.style.backgroundColor;
+
+    // document.body.style.backgroundColor = 'rgb(10 128 237)';
+
+    // setTimeout(() => {
+    //   document.body.style.backgroundColor = originalColor;
+    // }, 30000);
+
+    // location.href = 'https://www.booking.com';
+
+
+
+
+
+
+
+
+
+    // const hotelCard = document.getElementById('hotel-card');
+    //   hotelCard.innerHTML = `
+    //     <h3>Grand Luxury Resort</h3>
+    //     <p class="description">5-star beachfront paradise</p>
+    //     <div class="amenities">WiFi, Infinity Pool, Spa, Restaurant</div>
+    //     <span class="rating">Rating: <strong>4.9</strong>/5</span>
+    //   `;
+
+    //   const reviewSection = document.getElementById('review-section');
+    //   reviewSection.outerHTML = `
+    //     <div id="review-section" class="enhanced-review">
+    //       <h4>Latest Guest Review</h4>
+    //       <div class="review-text">Outstanding experience! Will definitely return.</div>
+    //       <div class="review-date">Posted: April 2025</div>
+    //     </div>
+    //   `;
+
+    //   const description = document.querySelector('.description');
+    //   description.textContent = '5-star luxury beachfront resort with panoramic views';
+
+    //   const ratingStrong = document.querySelector('.rating strong');
+    //   ratingStrong.firstChild.nodeValue = '5.0';
+
+
+
+
+
+
+
+
+
+
+  // document.write('<div>© 2025 BookAdvisor. All rights reserved.</div>');
+
+
+
+
+
+  const hotelCard = document.getElementById('hotel-card');
+  const reviewSection = document.getElementById('review-section');
+
+  reviewSection.append("-Angelina Jolie, 2025");
+  reviewSection.prepend("Location: USA, Las Vegas, NV");
+
+  const timestamp = document.createElement('div');
+  timestamp.textContent = new Date().toLocaleString();
+  reviewSection.appendChild(timestamp);
+
+  const loadMore = document.createElement('button');
+  loadMore.textContent = 'Load More';
+  reviewSection.after(loadMore);
+
+  reviewSection.before("Read our guest's reviews to make an informed decision.");
+
+  loadMore.replaceWith('Load More');
+
+  // hotelCard.remove();
+  </script>
 </html>
