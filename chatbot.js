@@ -86,7 +86,7 @@ function closeChatOnOutsideClick(e){
     }
 }
 
-chatBtn.addEventListener('click', () => {
+function toggleChat() {
     chatContainer.classList.toggle('active');
     if (chatContainer.classList.contains('active')) {
         if (messagesContainer.children.length === 0) {
@@ -96,7 +96,9 @@ chatBtn.addEventListener('click', () => {
     } else {
         document.removeEventListener('click', closeChatOnOutsideClick);
     }
-});
+}
+
+chatBtn.addEventListener('click', toggleChat);
 
 chatInput.addEventListener('keypress', (e) => {
     if (e.key === 'Enter' && chatInput.value.trim()) {

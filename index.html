@@ -26,6 +26,42 @@
             <li><a href="hotel-list.html">Hotels</a></li>
             <li><a href="about-us.html">About Us</a></li>
           </ul>
+          <div class="settings-menu">
+            <button class="settings-btn" data-open-pop-up data-popup-id="language">
+              <span class="current-language">EN</span>
+            </button>
+            <button class="settings-btn" data-open-pop-up data-popup-id="currency">
+              <span class="current-currency">USD</span>
+            </button>
+
+            <div id="language-popup" class="popup-container hidden">
+              <div class="popup-content">
+                <h3>Select Language</h3>
+                <ul class="option-list">
+                  <li data-select-language data-lang-id="en">English</li>
+                  <li data-select-language data-lang-id="uk">Ukrainian</li>
+                  <li data-select-language data-lang-id="es">Spanish</li>
+                  <li data-select-language data-lang-id="fr">French</li>
+                  <li data-select-language data-lang-id="de">German</li>
+                </ul>
+                <button class="close-popup" data-close-popup>Close</button>
+              </div>
+            </div>
+            
+            <div id="currency-popup" class="popup-container hidden">
+              <div class="popup-content">
+                <h3>Select Currency</h3>
+                <ul class="option-list">
+                  <li data-select-currency data-currency-id="USD">USD ($)</li>
+                  <li data-select-currency data-currency-id="EUR">EUR (€)</li>
+                  <li data-select-currency data-currency-id="UAH">UAH (₴)</li>
+                  <li data-select-currency data-currency-id="GBP">GBP (£)</li>
+                  <li data-select-currency data-currency-id="JPY">JPY (¥)</li>
+                </ul>
+                <button class="close-popup" data-close-popup>Close</button>
+              </div>
+            </div>
+          </div>
         </div>
       </nav>
     </header>
@@ -112,7 +148,7 @@
       <section class="why-choose-us">
         <div class="container">
           <h2 id="why-choose-us">Why Choose Us?</h2>
-          <ul class="features-list">
+          <ul class="features-list features-list-js">
             <li>
               <div class="feature-content">
                 <h3>24/7 Support</h3>
@@ -341,106 +377,77 @@
   </body>
   <script src="chatbot.js"></script>
   <script>
-    // const name = prompt('Enter your name');
-    // const isSure = confirm('Are you sure?');
+    const featuresList = document.querySelector('.features-list-js');
 
-    // if (isSure) {
-    //   alert(`Hello, ${name}`);
-    // } else {
-    //   alert('Hello, Guest');
-    // }
-
-
-
-
-
-
-    // function compareStrings(str1, str2) {
-    //   return str1.length > str2.length ? str1 : str2;
-    // }
-    // const string1 = 'Hello';
-    // const string2 = 'Goodbye';
-    // alert(compareStrings(string1, string2));
-
-
-
-
-
-
-    // const originalColor = document.body.style.backgroundColor;
-
-    // document.body.style.backgroundColor = 'rgb(10 128 237)';
-
-    // setTimeout(() => {
-    //   document.body.style.backgroundColor = originalColor;
-    // }, 30000);
-
-    // location.href = 'https://www.booking.com';
-
-
-
-
-
-
-
-
-
-    // const hotelCard = document.getElementById('hotel-card');
-    //   hotelCard.innerHTML = `
-    //     <h3>Grand Luxury Resort</h3>
-    //     <p class="description">5-star beachfront paradise</p>
-    //     <div class="amenities">WiFi, Infinity Pool, Spa, Restaurant</div>
-    //     <span class="rating">Rating: <strong>4.9</strong>/5</span>
-    //   `;
-
-    //   const reviewSection = document.getElementById('review-section');
-    //   reviewSection.outerHTML = `
-    //     <div id="review-section" class="enhanced-review">
-    //       <h4>Latest Guest Review</h4>
-    //       <div class="review-text">Outstanding experience! Will definitely return.</div>
-    //       <div class="review-date">Posted: April 2025</div>
-    //     </div>
-    //   `;
-
-    //   const description = document.querySelector('.description');
-    //   description.textContent = '5-star luxury beachfront resort with panoramic views';
-
-    //   const ratingStrong = document.querySelector('.rating strong');
-    //   ratingStrong.firstChild.nodeValue = '5.0';
-
-
-
-
-
-
-
-
-
-
-  // document.write('<div>© 2025 BookAdvisor. All rights reserved.</div>');
-
-
-
-
-
-  const hotelCard = document.getElementById('hotel-card');
-  const reviewSection = document.getElementById('review-section');
-
-  reviewSection.append("-Angelina Jolie, 2025");
-  reviewSection.prepend("Location: USA, Las Vegas, NV");
-
-  const timestamp = document.createElement('div');
-  timestamp.textContent = new Date().toLocaleString();
-  reviewSection.appendChild(timestamp);
-
-  const loadMore = document.createElement('button');
-  loadMore.textContent = 'Load More';
-  reviewSection.after(loadMore);
-
-  reviewSection.before("Read our guest's reviews to make an informed decision.");
-
-  loadMore.replaceWith('Load More');
-
-  // hotelCard.remove();
+    featuresList.onclick = (e) => {
+      const listItem = e.target.closest('li');
+      
+      if (listItem && featuresList.contains(listItem)) {
+          listItem.classList.toggle('active');
+      }
+    };
+    
+    document.addEventListener('DOMContentLoaded', () => {
+      document.addEventListener('click', (event) => {
+        if (event.target.closest('[data-open-pop-up]')) {
+          const button = event.target.closest('[data-open-pop-up]');
+          const popupId = button.dataset.popupId;
+          if (popupId) {
+            openPopup(popupId);
+          }
+        }
+        
+        if (event.target.dataset.closePopup !== undefined) {
+          closeAllPopups();
+        }
+        
+        if (event.target.dataset.selectLanguage !== undefined) {
+          const langId = event.target.dataset.langId;
+          if (langId) {
+            selectLanguage(langId);
+            closeAllPopups();
+          }
+        }
+        
+        if (event.target.dataset.selectCurrency !== undefined) {
+          const currencyId = event.target.dataset.currencyId;
+          if (currencyId) {
+            selectCurrency(currencyId);
+            closeAllPopups();
+          }
+        }
+      });
+      
+      function openPopup(popupId) {
+        closeAllPopups();
+        const popup = document.getElementById(`${popupId}-popup`);
+        if (popup) {
+          popup.classList.remove('hidden');
+        }
+      }
+      
+      function closeAllPopups() {
+        document.querySelectorAll('.popup-container').forEach(popup => {
+          popup.classList.add('hidden');
+        });
+      }
+      
+      function selectLanguage(langCode) {
+        const currentLang = document.querySelector('.current-language');
+        currentLang.textContent = langCode.toUpperCase();
+      }
+      
+      function selectCurrency(currencyCode) {
+        const currentCurrency = document.querySelector('.current-currency');
+        currentCurrency.textContent = currencyCode;
+      }
+      
+      window.addEventListener('click', (event) => {
+        if (!event.target.closest('.popup-content') && 
+            !event.target.closest('.settings-btn')) {
+          closeAllPopups();
+        }
+      });
+    });
   </script>
 </html>
