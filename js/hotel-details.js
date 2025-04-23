@@ -31,17 +31,11 @@ async function loadHotelDetails() {
 
       const listenerObj = {
         handleEvent() {
-          window.open('[https://www.booking.com](https://www.booking.com)', '_blank');
-          console.log(event.currentTarget);
+          window.open('https://www.booking.com', '_blank');
         }
       };
 
       button.addEventListener('click', listenerObj);
-
-      // button.removeEventListener('click', listenerObj);
-      // button.addEventListener('click', ()=>{
-      //   window.open('https://www.booking.com', '_blank');
-      // });
     });
   } catch (error) {
     console.error('Error loading hotel details:', error);

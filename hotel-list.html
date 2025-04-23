@@ -16,7 +16,7 @@
     <meta name="googlebot" content="index, follow" />
 
     <title>Browse Hotels - BookAdvisor</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./styles/styles.css" />
     <style>
       a {
         text-decoration: none;
@@ -42,31 +42,45 @@
           <h2>Search & Filter</h2>
           <div class="search-filters">
             <div class="search-bar">
-              <input type="search" placeholder="Search hotels..." />
-              <button type="button" aria-label="Search">
-                <i class="icon">🔍</i>
+              <div class="search-input-wrapper">
+                <i class="search-icon">🔍</i>
+                <input type="search" placeholder="Search hotels by name or location..." aria-label="Search hotels"/>
+              </div>
+              <button type="button" class="search-button">
+                Search
               </button>
             </div>
             <div class="filters">
-              <select name="price" aria-label="Price range">
-                <option value="">Price Range</option>
-                <option value="budget">Budget</option>
-                <option value="mid">Mid-range</option>
-                <option value="luxury">Luxury</option>
-              </select>
-              <select name="rating" aria-label="Star rating">
-                <option value="">Star Rating</option>
-                <option value="5">5 Stars</option>
-                <option value="4">4 Stars</option>
-                <option value="3">3 Stars</option>
-              </select>
-              <select name="amenities" aria-label="Amenities">
-                <option value="">Amenities</option>
-                <option value="pool">Pool</option>
-                <option value="spa">Spa</option>
-                <option value="gym">Gym</option>
-                <option value="restaurant">Restaurant</option>
-              </select>
+              <div class="filter-group">
+                <label for="price-filter">Price Range</label>
+                <select id="price-filter" name="price" aria-label="Price range">
+                  <option value="">All Prices</option>
+                  <option value="budget">Budget (Under $100)</option>
+                  <option value="mid">Mid-range ($100-$200)</option>
+                  <option value="luxury">Luxury ($200+)</option>
+                </select>
+              </div>
+              
+              <div class="filter-group">
+                <label for="rating-filter">Star Rating</label>
+                <select id="rating-filter" name="rating" aria-label="Star rating">
+                  <option value="">Any Rating</option>
+                  <option value="5">5 Stars</option>
+                  <option value="4">4 Stars & Up</option>
+                  <option value="3">3 Stars & Up</option>
+                </select>
+              </div>
+              
+              <div class="filter-group">
+                <label for="amenities-filter">Amenities</label>
+                <select id="amenities-filter" name="amenities" aria-label="Amenities">
+                  <option value="">All Amenities</option>
+                  <option value="pool">Pool</option>
+                  <option value="spa">Spa</option>
+                  <option value="gym">Gym</option>
+                  <option value="restaurant">Restaurant</option>
+                </select>
+              </div>
             </div>
           </div>
         </section>

@@ -98,7 +98,50 @@ function toggleChat() {
     }
 }
 
-chatBtn.addEventListener('click', toggleChat);
+let isDragging = false;
+let hasMovedSinceMouseDown = false;
+
+chatBtn.onmousedown = function(event) {
+    event.preventDefault();
+    hasMovedSinceMouseDown = false;
+
+    let shiftX = event.clientX - chatBtn.getBoundingClientRect().left;
+    let shiftY = event.clientY - chatBtn.getBoundingClientRect().top;
+
+    chatBtn.style.position = 'absolute';
+    chatBtn.style.zIndex = 1000;
+
+    function moveAt(pageX, pageY) {
+        chatBtn.style.left = pageX - shiftX + 'px';
+        chatBtn.style.top = pageY - shiftY + 'px';
+        hasMovedSinceMouseDown = true;
+        isDragging = true;
+    }
+
+    function onMouseMove(event) {
+        moveAt(event.pageX, event.pageY);
+    }
+
+    document.addEventListener('mousemove', onMouseMove);
+
+    document.addEventListener('mouseup', function onMouseUp() {
+        document.removeEventListener('mousemove', onMouseMove);
+        document.removeEventListener('mouseup', onMouseUp);
+        
+        setTimeout(() => {
+            isDragging = false;
+        }, 50);
+    });
+};
+
+chatBtn.addEventListener('click', function(event) {
+    if (isDragging || hasMovedSinceMouseDown) {
+        hasMovedSinceMouseDown = false;
+        event.stopPropagation();
+        return;
+    }
+    toggleChat();
+});
 
 chatInput.addEventListener('keypress', (e) => {
     if (e.key === 'Enter' && chatInput.value.trim()) {

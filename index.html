@@ -14,17 +14,17 @@
     <meta name="author" content="Yelyzaveta Demchenko" />
     <meta name="robots" content="index, follow" />
     <title>BookAdvisor - Find Your Perfect Stay</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="chatbot.css" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="stylesheet" href="./styles/chatbot.css" />
   </head>
   <body>
     <header>
       <nav class="main-nav">
         <div class="container">
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="hotel-list.html">Hotels</a></li>
-            <li><a href="about-us.html">About Us</a></li>
+            <li><a class="nav-link" href="index.html">Home</a></li>
+            <li><a class="nav-link" href="hotel-list.html">Hotels</a></li>
+            <li><a class="nav-link" href="about-us.html">About Us</a></li>
           </ul>
           <div class="settings-menu">
             <button class="settings-btn" data-open-pop-up data-popup-id="language">
@@ -260,22 +260,6 @@
       </dl>
     </section>
 
-    <section id="dom-examples" class="container">
-      <h2>Hotel Information Update Examples</h2>
-      
-      <div id="hotel-card">
-        <h3 style="color: #000;">Luxury Resort</h3>
-        <p class="description">5-star accommodation with ocean view</p>
-        <div class="amenities">WiFi, Pool, Spa</div>
-        <span class="rating">Rating: <strong>4.8</strong>/5</span>
-      </div>
-
-      <div id="review-section">
-        <p>Latest Reviews</p>
-        <div class="review-text">Excellent stay!</div>
-      </div>
-    </section>
-
     <footer>
       <div class="footer-content container">
         <div class="footer-section">
@@ -360,6 +344,7 @@
         </div>
       </div>
     </footer>
+  
     <div id="chat-btn" class="chat-btn">
       <img src="./assets/icons/message.svg" width="40" height="40" alt="Message">
     </div>
@@ -375,17 +360,36 @@
       </div>
     </div>
   </body>
-  <script src="chatbot.js"></script>
+  <script src="./js/chatbot.js"></script>
   <script>
     const featuresList = document.querySelector('.features-list-js');
 
-    featuresList.onclick = (e) => {
-      const listItem = e.target.closest('li');
+    if (featuresList) {
+      featuresList.addEventListener('mouseover', function(event) {
+        const listItem = event.target.closest('li');
+        
+        if (listItem && featuresList.contains(listItem)) {
+          listItem.style.backgroundColor = '#f0f8ff';
+          listItem.style.transform = 'scale(1.05)';
+          listItem.style.transition = 'all 0.3s ease';
+          listItem.style.boxShadow = '0 4px 8px rgba(0,0,0,0.1)';
+          
+          console.log('Mouse entered:', event.target, 'from:', event.relatedTarget);
+        }
+      });
       
-      if (listItem && featuresList.contains(listItem)) {
-          listItem.classList.toggle('active');
-      }
-    };
+      featuresList.addEventListener('mouseout', function(event) {
+        const listItem = event.target.closest('li');
+        
+        if (listItem && !listItem.contains(event.relatedTarget)) {
+          listItem.style.backgroundColor = '';
+          listItem.style.transform = '';
+          listItem.style.boxShadow = '';
+          
+          console.log('Mouse left:', event.target, 'to:', event.relatedTarget);
+        }
+      });
+    }
     
     document.addEventListener('DOMContentLoaded', () => {
       document.addEventListener('click', (event) => {
@@ -396,7 +400,7 @@
             openPopup(popupId);
           }
         }
-        
+
         if (event.target.dataset.closePopup !== undefined) {
           closeAllPopups();
         }

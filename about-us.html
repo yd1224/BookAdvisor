@@ -12,7 +12,7 @@
     <meta name="author" content="Yelyzaveta Demchenko" />
     <meta name="googlebot" content="index, follow" />
     <title>About BookAdvisor - Our Mission & Team</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./styles/styles.css" />
   </head>
   <body style="padding-top: 60px;">
     <header class="about-us-header">
@@ -28,15 +28,6 @@
     </header>
 
     <main>
-      <font family="Arial" size="5" color="black">
-        <h1>About BookAdvisor</h1>
-        <p>
-          Welcome to BookAdvisor, your trusted source for discovering and
-          booking the best hotels around the world. Our platform is designed to
-          make your travel planning seamless, efficient, and enjoyable.
-        </p>
-      </font>
-
       <section class="mission container">
         <h2 class="mission-title">Our Mission</h2>
         <div class="mission-content">
@@ -62,7 +53,7 @@
         </div>
       </section>
 
-      <section>
+      <section class="team-section">
         <h2>Our Team</h2>
         <p>
           We are a passionate team of travel enthusiasts, developers, and
@@ -71,10 +62,13 @@
           platform to ensure that you have access to the best deals and the most
           accurate hotel information.
         </p>
-        <ul>
-          <li type="none">
+        <div class="team-grid">
+          <div class="team-member">
             <figure>
-              <figcaption>Ryan Reynolds - CEO</figcaption>
+              <figcaption>
+                Ryan Reynolds
+                <span class="member-position">CEO</span>
+              </figcaption>
               <img
                 src="assets/team-members/ryan-reynolds.jpg"
                 width="150"
@@ -82,10 +76,13 @@
                 alt="Ryan Reynolds"
               />
             </figure>
-          </li>
-          <li type="none">
+          </div>
+          <div class="team-member">
             <figure>
-              <figcaption>Leonardo DiCaprio - Marketing Lead</figcaption>
+              <figcaption>
+                Leonardo DiCaprio
+                <span class="member-position">Marketing Lead</span>
+              </figcaption>
               <img
                 src="assets/team-members/leonardo-dicaprio.jpg"
                 width="150"
@@ -93,10 +90,13 @@
                 alt="Leonardo DiCaprio"
               />
             </figure>
-          </li>
-          <li type="none">
+          </div>
+          <div class="team-member">
             <figure>
-              <figcaption>Angelina Jolie - Marketing Lead</figcaption>
+              <figcaption>
+                Angelina Jolie
+                <span class="member-position">Marketing Lead</span>
+              </figcaption>
               <img
                 src="assets/team-members/angelina-jolie.jpg"
                 width="150"
@@ -104,25 +104,31 @@
                 alt="Angelina Jolie"
               />
             </figure>
-          </li>
-        </ul>
+          </div>
+        </div>
       </section>
 
-      <section>
+      <section class="contact-section">
         <h2>Contact Us</h2>
         <p>
           If you have any questions or feedback, feel free to reach out to us at
           <a href="mailto:support@bookadvisor.com">support@bookadvisor.com</a>.
-          Or leave a message in this form
+          Or leave a message in this form:
         </p>
-        <form>
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required />
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required />
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" required></textarea>
-          <button type="submit">Submit</button>
+        <form class="contact-form">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" class="form-control" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" class="form-control" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" class="form-control" required></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Submit</button>
         </form>
       </section>
     </main>

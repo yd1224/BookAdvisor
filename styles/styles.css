@@ -143,12 +143,16 @@ p {
   text-decoration: none;
 }
 
+.main-nav .nav-link {
+  color: #fff;
+}
+
 .main-nav a:link {
   color: #fff;
 }
 
 .main-nav a:visited {
-  color: #b1c1d1;
+  color: #fff;
 }
 
 .main-nav a:hover {
@@ -176,7 +180,7 @@ p {
 /* Language and Currency Settings Menu */
 .settings-menu {
   display: flex;
-  gap: 12px;
+  gap: 2px;
 }
 
 .settings-btn {
@@ -269,13 +273,19 @@ p {
 @media (max-width: 768px) {
   .settings-menu {
     position: absolute;
-    top: 16px;
-    right: 16px;
+    right: 6px;
   }
   
   .main-nav ul {
     justify-content: flex-start;
     padding-left: 16px;
+    gap: 12px;
+  }
+}
+
+@media (min-width: 768px) {
+  .settings-menu {
+    gap: 12px;
   }
 }
 
@@ -794,6 +804,7 @@ About Us Page Styles
   top: 0;
   width: 100%;
 }
+
 /* Mission Section Styles */
 .book-advisor {
   color: #2c3e50;
@@ -802,6 +813,10 @@ About Us Page Styles
 .mission {
   padding-top: 64px;
   padding-bottom: 64px;
+}
+
+.mission-title {
+  margin-bottom: 24px;
 }
 
 .mission-content {
@@ -839,6 +854,161 @@ About Us Page Styles
   }
 }
 
+/* Our Team Section */
+.team-section {
+  padding: 64px 0;
+  background: linear-gradient(to bottom, #fff, #f8f9fa);
+}
+
+.team-section h2 {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.team-section > p {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 48px;
+  color: #4a5568;
+  line-height: 1.7;
+}
+
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 16px;
+}
+
+.team-member {
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  width: 280px;
+  text-align: center;
+}
+
+
+.team-member figure {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.team-member img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+}
+
+.team-member figcaption {
+  padding: 20px 16px;
+  color: #2c3e50;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.member-position {
+  display: block;
+  color: #6c757d;
+  font-size: 14px;
+  font-weight: normal;
+  margin-top: 4px;
+}
+
+/* Contact Us Section */
+.contact-section {
+  padding: 64px 0;
+  background-color: #fff;
+}
+
+.contact-section h2 {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.contact-section > p {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 40px;
+  color: #4a5568;
+  line-height: 1.7;
+}
+
+.contact-section a {
+  color: #007bff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 32px;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e1e8ed;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #2c3e50;
+  background-color: #fff;
+}
+
+textarea.form-control {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.submit-btn {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .team-section,
+  .contact-section {
+    padding: 48px 0;
+  }
+  
+  .team-member {
+    width: 100%;
+    max-width: 320px;
+  }
+  
+  .contact-form {
+    padding: 24px 16px;
+  }
+}
+
 /*============= 
 Hotel List Page Styles 
 ===============*/
@@ -859,6 +1029,7 @@ Hotel List Page Styles
   background: #fff;
   padding: 32px;
   border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
 }
 
 .filters-section h2 {
@@ -866,7 +1037,9 @@ Hotel List Page Styles
   font-size: 24px;
   margin-bottom: 24px;
   position: relative;
-  padding-bottom: 8px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #f0f4f8;
+  text-align: center;
 }
 
 .search-filters {
@@ -876,78 +1049,133 @@ Hotel List Page Styles
   padding: 24px;
   background: white;
   border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f0f4f8;
 }
 
 .search-bar {
   display: flex;
   gap: 12px;
+  width: 100%;
+}
+
+.search-input-wrapper {
+  position: relative;
+  flex: 1;
+}
+
+.search-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6c757d;
+  font-size: 18px;
 }
 
 .search-bar input {
   flex: 1;
-  padding: 16px 16px 16px 48px;
+  width: 100%;
+  padding: 14px 16px 14px 48px;
   border: 2px solid #e1e8ed;
   border-radius: 8px;
   font-size: 16px;
   background: #f8f9fa;
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-.search-bar button {
-  padding: 16px 32px;
+.search-bar input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.1);
+  outline: none;
+}
+
+.search-button {
+  padding: 14px 32px;
   background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
   color: white;
   border: none;
   border-radius: 8px;
   font-weight: 600;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  min-width: 120px;
+}
+
+.search-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-button:active {
+  transform: translateY(0);
 }
 
 .filters {
   display: flex;
-  flex-direction: row;
-  gap: 16px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.filter-group {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.filter-group label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #2c3e50;
 }
 
 .filters select {
   width: 100%;
-  padding: 14px 16px;
+  padding: 12px 16px;
   border: 2px solid #e1e8ed;
   border-radius: 8px;
   font-size: 15px;
   color: #2c3e50;
   background-color: #f8f9fa;
   cursor: pointer;
-  padding-right: 40px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  appearance: none;
+}
+
+.filters select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.1);
+  outline: none;
 }
 
 @media (max-width: 768px) {
   .filters-section {
-    padding: 24px;
+    padding: 24px 16px;
     margin: 16px 0 32px;
   }
 
   .search-filters {
     padding: 16px;
+    gap: 20px;
   }
 
   .search-bar {
     flex-direction: column;
   }
 
-  .search-bar button {
+  .search-button {
     width: 100%;
     justify-content: center;
   }
 
   .filters {
     flex-direction: column;
+    gap: 16px;
   }
 
-  .filters select {
+  .filter-group {
     width: 100%;
   }
 }
@@ -1121,6 +1349,11 @@ Hotel List Page Styles
 .hotel-details__header {
   text-align: center;
   margin-bottom: 32px;
+}
+
+.hotel-details__description{
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .hotel-details__header h1 {
