@@ -1,0 +1,92 @@
+{
+  "hotels": [
+    {
+      "id": "grand-plaza",
+      "name": "Grand Plaza Hotel",
+      "location": "Downtown, New York City",
+      "img": "hotel-room.jpg",
+      "rating": 4.8,
+      "reviews": 256,
+      "price": 299,
+      "description": "Welcome to the Grand Plaza Hotel, where luxury meets Manhattan's vibrant energy. Situated in the heart of New York City, our 5-star establishment stands as a beacon of sophistication and elegance. From the moment you step into our grand lobby with its crystal chandeliers and marble floors, you'll be transported into a world of refined luxury.\n\nOur rooms and suites offer breathtaking views of the iconic city skyline, with floor-to-ceiling windows that frame the urban landscape like living artwork. Each space is meticulously designed with premium furnishings, plush bedding, and state-of-the-art technology to ensure your utmost comfort.\n\nIndulge your palate at our world-class restaurants, where Michelin-starred chefs create culinary masterpieces that blend international flavors with local ingredients. Our rooftop bar, Sky Lounge, offers craft cocktails and panoramic views of Central Park and the Manhattan skyline, creating an unforgettable setting for your evening.\n\nFor relaxation and rejuvenation, our luxury spa provides a serene escape from the city's hustle, while our modern fitness center is equipped with the latest equipment for maintaining your wellness routine. Our attentive staff is available 24/7 to ensure your stay exceeds every expectation, making the Grand Plaza Hotel your perfect home away from home in the city that never sleeps.",
+      "amenities": [
+        {"name": "Pool", "icon": "🏊‍♂️"},
+        {"name": "Restaurant", "icon": "🍽️"},
+        {"name": "Spa", "icon": "💆‍♀️"},
+        {"name": "Gym", "icon": "💪"}
+      ],
+      "features": [
+        "24/7 Room Service",
+        "Valet Parking",
+        "Business Center",
+        "Concierge Services",
+        "Pet Friendly",
+        "Free Wi-Fi"
+      ],
+      "rooms": [
+        {
+          "type": "Deluxe Room",
+          "price": 299,
+          "capacity": 2,
+          "amenities": ["King Bed", "City View", "Mini Bar"]
+        },
+        {
+          "type": "Executive Suite",
+          "price": 499,
+          "capacity": 3,
+          "amenities": ["King Bed", "Separate Living Area", "Jacuzzi"]
+        },
+        {
+          "type": "Presidential Suite",
+          "price": 999,
+          "capacity": 4,
+          "amenities": ["Two Bedrooms", "Private Terrace", "Butler Service"]
+        }
+      ]
+    },
+    {
+      "id": "seaside-resort",
+      "name": "Seaside Resort & Spa",
+      "location": "Miami Beach, Florida",
+      "img": "sea-resort.jpg",
+      "rating": 4.6,
+      "reviews": 189,
+      "price": 359,
+      "description": "Discover a slice of paradise at the Seaside Resort & Spa, where the crystal-clear waters of Miami Beach meet unparalleled luxury. Our oceanfront sanctuary offers an escape from the ordinary, with the soothing sound of waves and warm ocean breezes creating the perfect backdrop for your tropical getaway.\n\nEvery room in our resort is thoughtfully positioned to capture stunning views of the Atlantic Ocean, with private balconies where you can witness breathtaking sunrises over the horizon. The contemporary coastal design of our accommodations features soft, natural textures and a calming color palette inspired by the beach landscape.\n\nImmerse yourself in the ultimate relaxation at our world-class spa, where ancient healing traditions meet modern therapeutic techniques. Our signature treatments incorporate local ingredients and marine elements to rejuvenate both body and spirit. The resort's infinity pool seems to merge with the ocean beyond, creating an Instagram-worthy setting for your sun-soaked days.\n\nWhether you're seeking a romantic escape, a family vacation, or a solo wellness retreat, the Seaside Resort & Spa provides an idyllic setting where luxury, nature, and hospitality create unforgettable memories.",
+      "amenities": [
+        {"name": "Beach Access", "icon": "🏖️"},
+        {"name": "Pool", "icon": "🏊‍♂️"},
+        {"name": "Spa", "icon": "💆‍♀️"},
+        {"name": "Restaurant", "icon": "🍽️"}
+      ],
+      "features": [
+        "Private Beach",
+        "Beachfront Dining",
+        "Water Sports",
+        "Yoga Classes",
+        "Kids Club",
+        "Free Wi-Fi"
+      ],
+      "rooms": [
+        {
+          "type": "Ocean View Room",
+          "price": 359,
+          "capacity": 2,
+          "amenities": ["Queen Bed", "Ocean View", "Balcony"]
+        },
+        {
+          "type": "Beachfront Suite",
+          "price": 559,
+          "capacity": 3,
+          "amenities": ["King Bed", "Direct Beach Access", "Kitchen"]
+        },
+        {
+          "type": "Penthouse Suite",
+          "price": 1299,
+          "capacity": 6,
+          "amenities": ["Three Bedrooms", "Private Pool", "Butler Service"]
+        }
+      ]
+    }
+  ]
+}

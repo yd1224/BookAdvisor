@@ -1,44 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Find information about your favourite hotels around the world.">
-    <meta name="keywords" content="hotels, booking, travel, world, vacation, holiday, trip, BookAdvisor">
-    <meta name="author" content="Yelyzaveta Demchenko">
-    <meta name="robots" content="index, follow">
-    <meta name="googlebot" content="index, follow">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Find information about your favourite hotels around the world."
+    />
+    <meta
+      name="keywords"
+      content="hotels, booking, travel, world, vacation, holiday, trip, BookAdvisor"
+    />
+    <meta name="author" content="Yelyzaveta Demchenko" />
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
 
     <title>Browse Hotels - BookAdvisor</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body bgcolor="lightblue" alink="red" vlink="green">
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <style>
+      a {
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="hotel-list.html">Hotels</a></li>
-                <li><a href="about-us.html">About Us</a></li>
-            </ul>
-        </nav>
+      <nav class="main-nav hotel-list-nav">
+        <div class="container">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="hotel-list.html">Hotels</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+          </ul>
+        </div>
+      </nav>
     </header>
 
-    <main>
-        <h1>Hotels</h1>
-        <p>Find information about your favourite hotels around the world.</p>
-        <p>Discover amazing hotels worldwide and make informed decisions based on real traveler experiences.</p>
-        <section>
-            <h2 id="list-of-hotels">Hotel List</h2>
+    <main class="hotel-list-page">
+      <div class="container">
+        <section class="filters-section">
+          <h2>Search & Filter</h2>
+          <div class="search-filters">
+            <div class="search-bar">
+              <div class="search-input-wrapper">
+                <i class="search-icon">🔍</i>
+                <input type="search" placeholder="Search hotels by name or location..." aria-label="Search hotels"/>
+              </div>
+              <button type="button" class="search-button">
+                Search
+              </button>
+            </div>
+            <div class="filters">
+              <div class="filter-group">
+                <label for="price-filter">Price Range</label>
+                <select id="price-filter" name="price" aria-label="Price range">
+                  <option value="">All Prices</option>
+                  <option value="budget">Budget (Under $100)</option>
+                  <option value="mid">Mid-range ($100-$200)</option>
+                  <option value="luxury">Luxury ($200+)</option>
+                </select>
+              </div>
+              
+              <div class="filter-group">
+                <label for="rating-filter">Star Rating</label>
+                <select id="rating-filter" name="rating" aria-label="Star rating">
+                  <option value="">Any Rating</option>
+                  <option value="5">5 Stars</option>
+                  <option value="4">4 Stars & Up</option>
+                  <option value="3">3 Stars & Up</option>
+                </select>
+              </div>
+              
+              <div class="filter-group">
+                <label for="amenities-filter">Amenities</label>
+                <select id="amenities-filter" name="amenities" aria-label="Amenities">
+                  <option value="">All Amenities</option>
+                  <option value="pool">Pool</option>
+                  <option value="spa">Spa</option>
+                  <option value="gym">Gym</option>
+                  <option value="restaurant">Restaurant</option>
+                </select>
+              </div>
+            </div>
+          </div>
         </section>
+
+        <section class="hotel-cards">
+        </section>
+      </div>
     </main>
 
-
     <footer>
-        <p>&copy; 2025 BookAdvisor. All rights reserved.</p>
-        <a href="mailto:bookadvisor@example.com">Email Us</a> |
-        <a href="tel:123456789">Call Us</a> |
-        <a href="about-us.html">About Us</a> |
-        <a href="https://www.tripadvisor.com" target="_blank">Partnered by TripAdvisor</a>
+      <div class="footer-content container">
+        <div class="footer-section">
+          <h3>About BookAdvisor</h3>
+          <p>
+            Your trusted companion in finding the perfect accommodation for your
+            next adventure. We help travelers make informed decisions through
+            authentic reviews and comprehensive hotel information.
+          </p>
+        </div>
+
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="hotel-list.html">Hotels</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <ul>
+            <li>
+              <a href="mailto:bookadvisor@example.com"
+                ><i class="icon">✉</i> bookadvisor@example.com</a
+              >
+            </li>
+            <li>
+              <a href="tel:123456789"
+                ><i class="icon">📞</i> +1 (123) 456-789</a
+              >
+            </li>
+            <li>
+              <address>
+                <i class="icon">📍</i> 123 Travel Street, Tourism City, TC 12345
+              </address>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <div class="social-links">
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              aria-label="Follow us on Facebook"
+              ><i class="icon">👥</i></a
+            >
+            <a
+              href="https://twitter.com"
+              target="_blank"
+              aria-label="Follow us on Twitter"
+              ><i class="icon">🐦</i></a
+            >
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              aria-label="Follow us on Instagram"
+              ><i class="icon">📸</i></a
+            >
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              aria-label="Follow us on LinkedIn"
+              ><i class="icon">💼</i></a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container">
+          <p>&copy; 2025 BookAdvisor. All rights reserved.</p>
+          <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Cookie Policy</a>
+          </div>
+        </div>
+      </div>
     </footer>
-</body>
+
+    <script src="js/hotels.js"></script>
+  </body>
 </html>
